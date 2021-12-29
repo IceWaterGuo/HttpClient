@@ -1,9 +1,41 @@
 # HttpClient使用文档
 
-### httpClient是基于Retrofit2.0+RxJava3.0+MVP封装的一个网络请求库，多个BaseUrl无缝切换，使用极其简单
+## httpClient是基于Retrofit2.0+RxJava3.0+MVP封装的一个网络请求库，多个BaseUrl无缝切换，使用极其简单
+
+## 集成步骤
+* 在项目根目录下的 build.gradle 文件中加入
+
+```
+buildscript {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+* 在项目 app 模块下的 build.gradle 文件中加入
+
+```
+android {
+    // 支持 JDK 1.8
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.github.IceWaterGuo:HttpClient:1.0'
+}
+```
 
 
-#### 1.请求参数(请求参数支持3种方式)
+## 1.请求参数(请求参数支持3种方式)
 
 * 单独添加
 
@@ -43,7 +75,7 @@ RequestBean requestBean = new RequestBean("b5baa6d5add44cc3a6f9bd7596953669", "�
 ```
 
 
-#### 2.请求方法
+## 2.请求方法
 * get
 
 ```
@@ -116,11 +148,11 @@ HttpClient.create(this)
                 });
 ```
 
-#### 3.请求参数Callback
+## 3.请求参数Callback
 * 用于普通请求的HttpCallback
 * 用于文件下载的FileCallback
 
-### 4.使用说明
+## 4.使用说明
 
 * 这一版没有做全局配置，所以baseUrl需要手动在Application中初始化网络框架时进行指定
 
@@ -138,7 +170,7 @@ HttpClient.create(this)
 * 网络请求时不指定baseUrl，默认使用初始化网络框架时指定的baseUrl；需要切换baseUrl时，只需要网络请求时指定baseUrl即可
 * 每个请求的方法必须传url,不然就报错
 
-#### 5.使用例子
+## 5.使用例子
 
 ```
 HttpClient.create(this)
