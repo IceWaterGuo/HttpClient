@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HttpClient</string>
+    <string name="base_yesterday">昨天</string>
+    <string name="base_token_invalid_relogin">登录已失效，请重新登录</string>
 </resources>

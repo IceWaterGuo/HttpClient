@@ -112,7 +112,7 @@ public class UIUtils {
         options.inSampleSize = scale;
         Bitmap bitmap = BitmapFactory.decodeFile(imagePath, options);
         int degree = readPictureDegree(imagePath);
-        bitmap = rotaingImageView(degree, bitmap);
+        bitmap = rotatingImageView(degree, bitmap);
         return bitmap;
     }
 
@@ -151,7 +151,7 @@ public class UIUtils {
      * @param bitmap
      * @return Bitmap
      */
-    public static Bitmap rotaingImageView(int angle, Bitmap bitmap) {
+    public static Bitmap rotatingImageView(int angle, Bitmap bitmap) {
         //旋转图片 动作
         Matrix matrix = new Matrix();
         matrix.postRotate(angle);

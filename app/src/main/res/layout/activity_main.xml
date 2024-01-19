@@ -38,7 +38,7 @@
         android:text="测试upload"
         android:onClick="testUpload"/>
 
-    <com.ice.common.widget.ColorfulProgressBar
+    <com.ice.httpclient.widget.ColorfulProgressBar
         android:id="@+id/colorful_progressbar"
         xmlns:cool="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
