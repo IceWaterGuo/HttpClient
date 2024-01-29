@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/set_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置圆环进度" />
+
+    <Button
+        android:id="@+id/reset_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重置圆环进度" />
+
+    <com.ice.httpclient.widget.MyCircleProgressView
+        android:id="@+id/progress_view"
+        android:layout_width="148dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+
+        app:animTime="1000"
+        app:bgCirWidth="5dp"
+
+        app:cirWidth="15dp"
+
+        app:hint="出勤率"
+        app:hintColor="#8098B2"
+        app:hintShow="false"
+        app:hintSize="15sp"
+        app:isAnim="true"
+
+        app:isGradient="false"
+
+        app:shadowColor="#000000"
+        app:shadowShow="false"
+        app:shadowSize="9dp"
+
+        app:unit="%"
+        app:value="0"
+        app:valueColor="#5456A4"
+        app:valueSize="25sp" />
+
+</LinearLayout>

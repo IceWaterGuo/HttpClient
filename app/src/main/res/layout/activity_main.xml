@@ -1,56 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试get"
-        android:textAllCaps="false"
-        android:onClick="testGet"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="测试post"
-        android:onClick="testPost"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="测试download"
-        android:onClick="testDownload"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="测试传json"
-        android:onClick="testPostJson"/>
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="测试upload"
-        android:onClick="testUpload"/>
-
-    <com.ice.httpclient.widget.ColorfulProgressBar
-        android:id="@+id/colorful_progressbar"
-        xmlns:cool="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        cool:reachedColor="#FF1493"/>
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/tv_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </ScrollView>
-</LinearLayout>
+        <Button
+            android:id="@+id/bt_http"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="httpClient测试"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="圆形view"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

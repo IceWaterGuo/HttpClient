@@ -53,6 +53,8 @@ public class ColorfulProgressBar extends View {
         mProgressTextOffset = typedArray.getDimension(R.styleable.ColorfulProgressBar_progressTextOffset, UIUtils.dp2px(context, 3.0f));
         mProgressTextSize = typedArray.getDimension(R.styleable.ColorfulProgressBar_progressTextSize, UIUtils.sp2px(context, 14.0f));
 
+        typedArray.recycle();
+
         init();
     }
 

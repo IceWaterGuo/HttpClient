@@ -7,7 +7,7 @@ import com.ice.net.http.Progress;
  * Desc:
  * Created by icewater on 2021/12/06.
  */
-public interface MainView extends BaseView {
+public interface HttpView extends BaseView {
     void onProgress(Progress progress);
 
     void getDataSuccess(String data);

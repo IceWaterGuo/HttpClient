@@ -1,23 +1,20 @@
 package com.ice.httpclient.activity;
 
+import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 
 import com.ice.httpclient.R;
-import com.ice.httpclient.presenter.MainPresenter;
-import com.ice.httpclient.view.MainView;
-import com.ice.httpclient.widget.ColorfulProgressBar;
-import com.ice.net.http.Progress;
+import com.ice.net.base.activity.BaseActivity;
 
-import butterknife.BindView;
+public class MainActivity extends BaseActivity {
 
-public class MainActivity extends BaseIceActivity<MainView, MainPresenter> implements MainView{
-
-    @BindView(R.id.colorful_progressbar)
-    ColorfulProgressBar mColorfulProgressBar;
+    private Button mBtHttp;
+    private Button mBtView;
 
     @Override
-    protected MainPresenter onCreatePresenter() {
-        return new MainPresenter();
+    protected void setImmerse() {
+
     }
 
     @Override
@@ -27,43 +24,18 @@ public class MainActivity extends BaseIceActivity<MainView, MainPresenter> imple
 
     @Override
     public void initView() {
-
-    }
-
-    public void testGet(View view) {
-        mPresenter.testGet();
-    }
-
-    public void testPost(View view){
-        mPresenter.testPost();
-    }
-    public void testPostJson(View view){
-        mPresenter.testPostJson();
-    }
-
-    //申请读写权限（此处省略）
-    public void testDownload(View view){
-        mPresenter.testDownLoad();
-    }
-    public void testUpload(View view){
-        mPresenter.testUpload();
+        mBtHttp = findViewById(R.id.bt_http);
+        mBtView = findViewById(R.id.bt_view);
     }
 
     @Override
-    public void onProgress(Progress progress) {
-        mColorfulProgressBar.setMax(progress.totalSize);
-        mColorfulProgressBar.setProgress(progress.currentSize);
+    public void initListeners() {
+        mBtHttp.setOnClickListener(v -> {
+            startActivity(new Intent(this, HttpActivity.class));
+        });
+        mBtView.setOnClickListener(v -> {
+            startActivity(new Intent(this, CircleViewActivity.class));
+        });
     }
-
-    @Override
-    public void getDataSuccess(String data) {
-        mTextView.setText(data);
-    }
-
-    @Override
-    public void getDataFail(String msg) {
-        mTextView.setText(msg);
-    }
-
 
 }

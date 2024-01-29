@@ -8,4 +8,32 @@
         <attr name="progressTextOffset" format="dimension" />
         <attr name="progressTextSize" format="dimension" />
     </declare-styleable>
+
+    <!-- 圆形进度条 -->
+    <declare-styleable name="MyCircleProgressView">
+        <attr name="bgCirWidth" format="dimension" />
+        <attr name="bgCirColor" format="color" />
+        <attr name="cirWidth" format="dimension" />
+        <attr name="cirColor" format="color" />
+        <attr name="value" format="integer" />
+        <attr name="valueSize" format="dimension" />
+        <attr name="valueColor" format="color" />
+        <attr name="maxProgress" format="integer" />
+        <attr name="startAngle" format="float" />
+        <attr name="sweepAngle" format="float" />
+        <attr name="unit" format="string" />
+        <attr name="hint" format="string" />
+        <attr name="hintShow" format="boolean" />
+        <attr name="hintSize" format="dimension" />
+        <attr name="hintColor" format="color" />
+        <attr name="gradient" format="dimension" />
+        <attr name="isGradient" format="boolean" />
+        <attr name="shadowSize" format="dimension" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowShow" format="boolean" />
+        <attr name="digit" format="integer" />
+        <attr name="isAnim" format="boolean" />
+        <attr name="animTime" format="integer" />
+    </declare-styleable>
+
 </resources>

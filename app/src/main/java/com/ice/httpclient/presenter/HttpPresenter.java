@@ -6,7 +6,7 @@ import com.ice.httpclient.bean.BaseBean;
 import com.ice.httpclient.bean.NewsBean;
 import com.ice.httpclient.bean.RequestBean;
 import com.ice.httpclient.bean.WeatherBean;
-import com.ice.httpclient.view.MainView;
+import com.ice.httpclient.view.HttpView;
 import com.ice.net.base.presenter.BasePresenter;
 import com.ice.net.callback.FileCallback;
 import com.ice.net.callback.HttpCallback;
@@ -19,7 +19,7 @@ import java.util.HashMap;
  * Desc:
  * Created by icewater on 2021/12/06.
  */
-public class MainPresenter extends BasePresenter<MainView> {
+public class HttpPresenter extends BasePresenter<HttpView> {
     public void testGet() {
         //        HashMap<String, Object> params = new HashMap<>();
         //        params.put("appKey", "1328ffff76a74d2987914a0de08b9f44");
